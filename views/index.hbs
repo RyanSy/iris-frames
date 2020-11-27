@@ -1,0 +1,15 @@
+<h1>LP Framer</h1>
+
+<form class="" action="/search" method="post">
+  <input type="text" name="query">
+  <input type="submit" value="Frame It">
+</form>
+
+{{#if image_url}}
+  <p>{{title}}</p>
+  <a href={{image_url}} download>
+    <img src="{{image_url}}" alt="{{title}}">
+  </a>
+{{else}}
+  <p>Search for an LP to begin.</p>
+{{/if}}
