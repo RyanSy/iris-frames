@@ -2,14 +2,12 @@
 
 <form class="" action="/search" method="post">
   <input type="text" name="query">
-  <input type="submit" value="Frame It">
+  <input type="submit" value="search">
 </form>
 
 {{#if image_url}}
   <p>{{title}}</p>
-  <a href={{image_url}} download>
-    <img src="{{image_url}}" alt="{{title}}">
-  </a>
+  <img src="{{image_url}}" alt="{{title}}">
 {{else}}
   <p>Search for an LP to begin.</p>
 {{/if}}
