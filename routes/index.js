@@ -15,7 +15,7 @@ router.post('/search', function(req, res, next) {
 
       async function createImage() {
         const payload = {
-          html: `<div style="height: 200px; width: 200px; border: 10px solid #000000;"><img style="height: 200px; width: 200px;" src="${cover_image}" alt="${title}"></div>`
+          html: `<div style="height: 200px; width: 200px; border: 10px solid #000000;"><img style="height: 200px; width: 200px;" src="${cover_image}" alt="${title}" crossorigin="anonymous"></div>`
         };
 
         let headers = {

@@ -7,7 +7,39 @@
 
 {{#if image_url}}
   <p>{{title}}</p>
-  <img src="{{image_url}}" alt="{{title}}">
+  <img src="{{image_url}}" alt="{{title}}" crossorigin="anonymous">
+  <p><button id="downloadButton" type="button" name="button">Download Image</button></p>
 {{else}}
   <p>Search for an LP to begin.</p>
 {{/if}}
+
+<script type="text/javascript">
+// var downloadButton = document.getElementById("downloadButton");
+// downloadButton.addEventListener('click', startDownload);
+//
+// function startDownload() {
+//   let imageURL = "{{image_url}}";
+//   downloadedImg = new Image;
+//   downloadedImg.crossOrigin = "Anonymous";
+//   downloadedImg.addEventListener("load", imageReceived, false);
+//   downloadedImg.src = imageURL;
+// }
+//
+// function imageReceived() {
+//   let canvas = document.createElement("canvas");
+//   let context = canvas.getContext("2d");
+//
+//   canvas.width = downloadedImg.width;
+//   canvas.height = downloadedImg.height;
+//
+//   context.drawImage(downloadedImg, 0, 0);
+//   imageBox.appendChild(canvas);
+//
+//   try {
+//     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
+//   }
+//   catch(err) {
+//     console.log("Error: " + err);
+//   }
+// }
+</script>
