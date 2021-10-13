@@ -1,45 +1,19 @@
 <h1>LP Framer</h1>
 
-<form class="" action="/search" method="post">
-  <input type="text" name="query">
-  <input type="submit" value="search">
+<form action="/search" method="post">
+  <div class="form-group">
+    <input type="text" class="form-control" name="query">
+  </div>
+  <button class="btn btn-primary mt-3 mb-3" type="submit">Search</button>
 </form>
 
-{{#if image_url}}
+{{#if imageFileName}}
   <p>{{title}}</p>
-  <img src="{{image_url}}" alt="{{title}}" crossorigin="anonymous">
-  <p><button id="downloadButton" type="button" name="button">Download Image</button></p>
+  <img src="images/{{imageFileName}}" alt="{{title}}">
+  <form id="imageDownloadForm" action="/download" method="post">
+    <input type="hidden" name="imageFileName" value="{{imageFileName}}">
+    <button id="downloadButton" class="btn btn-primary mt-3 mb-3" type="submit" for="imageDownloadForm">Download Image</button>
+  </form>
 {{else}}
   <p>Search for an LP to begin.</p>
 {{/if}}
-
-<script type="text/javascript">
-// var downloadButton = document.getElementById("downloadButton");
-// downloadButton.addEventListener('click', startDownload);
-//
-// function startDownload() {
-//   let imageURL = "{{image_url}}";
-//   downloadedImg = new Image;
-//   downloadedImg.crossOrigin = "Anonymous";
-//   downloadedImg.addEventListener("load", imageReceived, false);
-//   downloadedImg.src = imageURL;
-// }
-//
-// function imageReceived() {
-//   let canvas = document.createElement("canvas");
-//   let context = canvas.getContext("2d");
-//
-//   canvas.width = downloadedImg.width;
-//   canvas.height = downloadedImg.height;
-//
-//   context.drawImage(downloadedImg, 0, 0);
-//   imageBox.appendChild(canvas);
-//
-//   try {
-//     localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-//   }
-//   catch(err) {
-//     console.log("Error: " + err);
-//   }
-// }
-</script>
