@@ -1,10 +1,10 @@
 {
-  "name": "lp-framer",
+  "name": "iris-frames",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "DEBUG=lp-framer:* nodemon"
+    "dev": "DEBUG=iris-frames:* nodemon"
   },
   "dependencies": {
     "axios": "^0.21.0",
